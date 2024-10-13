@@ -1,0 +1,361 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -webkit-perspective: 600px;
+          perspective: 600px;
+  overflow: hidden;
+  background-image: radial-gradient(circle, #123, #000 30em);
+}
+
+.scene {
+  position: relative;
+}
+
+.ball {
+  position: absolute;
+  inset: -8em;
+  background-image: radial-gradient(circle at top, #fff, #000);
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 2em #000a;
+          box-shadow: 0 0 2em #000a;
+}
+
+.ring {
+  position: absolute;
+}
+
+.ring i {
+  --hue: 2156;
+  position: absolute;
+  inset: -2em;
+  border: 1px solid hsl(var(--hue), 100%, 75%);
+  -webkit-box-shadow: 0 0 1em hsl(var(--hue), 100%, 75%);
+          box-shadow: 0 0 1em hsl(var(--hue), 100%, 75%);
+  border-radius: 50%;
+  -webkit-transform: rotateZ(var(--rz)) rotateY(var(--ry)) rotateX(var(--rx)) translateZ(-15em);
+          transform: rotateZ(var(--rz)) rotateY(var(--ry)) rotateX(var(--rx)) translateZ(-15em);
+  -webkit-animation: iMove 24s linear var(--delay) infinite both, iScale 24s var(--delay) infinite both cubic-bezier(0.3642, 0, 0.6358, 1);
+          animation: iMove 24s linear var(--delay) infinite both, iScale 24s var(--delay) infinite both cubic-bezier(0.3642, 0, 0.6358, 1);
+}
+
+.ring i:nth-child(1) {
+  --delay: 0s;
+  --hue: 0;
+  --rx: 1deg;
+  --ry: 37deg;
+  --rz: 287deg;
+}
+
+.ring i:nth-child(2) {
+  --delay: -0.75s;
+  --hue: 98;
+  --rx: 21deg;
+  --ry: 292deg;
+  --rz: 71deg;
+}
+
+.ring i:nth-child(3) {
+  --delay: -1.5s;
+  --hue: 196;
+  --rx: 294deg;
+  --ry: 260deg;
+  --rz: 39deg;
+}
+
+.ring i:nth-child(4) {
+  --delay: -2.25s;
+  --hue: 294;
+  --rx: 92deg;
+  --ry: 289deg;
+  --rz: 77deg;
+}
+
+.ring i:nth-child(5) {
+  --delay: -3s;
+  --hue: 392;
+  --rx: 296deg;
+  --ry: 131deg;
+  --rz: 69deg;
+}
+
+.ring i:nth-child(6) {
+  --delay: -3.75s;
+  --hue: 490;
+  --rx: 182deg;
+  --ry: 319deg;
+  --rz: 39deg;
+}
+
+.ring i:nth-child(7) {
+  --delay: -4.5s;
+  --hue: 588;
+  --rx: 13deg;
+  --ry: 335deg;
+  --rz: 78deg;
+}
+
+.ring i:nth-child(8) {
+  --delay: -5.25s;
+  --hue: 686;
+  --rx: 37deg;
+  --ry: 252deg;
+  --rz: 72deg;
+}
+
+.ring i:nth-child(9) {
+  --delay: -6s;
+  --hue: 784;
+  --rx: 347deg;
+  --ry: 21deg;
+  --rz: 254deg;
+}
+
+.ring i:nth-child(10) {
+  --delay: -6.75s;
+  --hue: 882;
+  --rx: 137deg;
+  --ry: 164deg;
+  --rz: 44deg;
+}
+
+.ring i:nth-child(11) {
+  --delay: -7.5s;
+  --hue: 980;
+  --rx: 100deg;
+  --ry: 33deg;
+  --rz: 168deg;
+}
+
+.ring i:nth-child(12) {
+  --delay: -8.25s;
+  --hue: 1078;
+  --rx: 202deg;
+  --ry: 175deg;
+  --rz: 252deg;
+}
+
+.ring i:nth-child(13) {
+  --delay: -9s;
+  --hue: 1176;
+  --rx: 243deg;
+  --ry: 148deg;
+  --rz: 223deg;
+}
+
+.ring i:nth-child(14) {
+  --delay: -9.75s;
+  --hue: 1274;
+  --rx: 46deg;
+  --ry: 218deg;
+  --rz: 263deg;
+}
+
+.ring i:nth-child(15) {
+  --delay: -10.5s;
+  --hue: 1372;
+  --rx: 232deg;
+  --ry: 307deg;
+  --rz: 28deg;
+}
+
+.ring i:nth-child(16) {
+  --delay: -11.25s;
+  --hue: 1470;
+  --rx: 24deg;
+  --ry: 196deg;
+  --rz: 121deg;
+}
+
+.ring i:nth-child(17) {
+  --delay: -12s;
+  --hue: 1568;
+  --rx: 44deg;
+  --ry: 38deg;
+  --rz: 76deg;
+}
+
+.ring i:nth-child(18) {
+  --delay: -12.75s;
+  --hue: 1666;
+  --rx: 177deg;
+  --ry: 1deg;
+  --rz: 316deg;
+}
+
+.ring i:nth-child(19) {
+  --delay: -13.5s;
+  --hue: 1764;
+  --rx: 317deg;
+  --ry: 128deg;
+  --rz: 234deg;
+}
+
+.ring i:nth-child(20) {
+  --delay: -14.25s;
+  --hue: 1862;
+  --rx: 116deg;
+  --ry: 3deg;
+  --rz: 227deg;
+}
+
+.ring i:nth-child(21) {
+  --delay: -15s;
+  --hue: 1960;
+  --rx: 243deg;
+  --ry: 185deg;
+  --rz: 247deg;
+}
+
+.ring i:nth-child(22) {
+  --delay: -15.75s;
+  --hue: 2058;
+  --rx: 20deg;
+  --ry: 66deg;
+  --rz: 348deg;
+}
+
+.ring i:nth-child(23) {
+  --delay: -16.5s;
+  --hue: 2156;
+  --rx: 162deg;
+  --ry: 347deg;
+  --rz: 35deg;
+}
+
+.ring i:nth-child(24) {
+  --delay: -17.25s;
+  --hue: 2254;
+  --rx: 248deg;
+  --ry: 218deg;
+  --rz: 32deg;
+}
+
+.ring i:nth-child(25) {
+  --delay: -18s;
+  --hue: 2352;
+  --rx: 264deg;
+  --ry: 15deg;
+  --rz: 264deg;
+}
+
+.ring i:nth-child(26) {
+  --delay: -18.75s;
+  --hue: 2450;
+  --rx: 99deg;
+  --ry: 89deg;
+  --rz: 312deg;
+}
+
+.ring i:nth-child(27) {
+  --delay: -19.5s;
+  --hue: 2548;
+  --rx: 11deg;
+  --ry: 66deg;
+  --rz: 185deg;
+}
+
+.ring i:nth-child(28) {
+  --delay: -20.25s;
+  --hue: 2646;
+  --rx: 324deg;
+  --ry: 201deg;
+  --rz: 192deg;
+}
+
+.ring i:nth-child(29) {
+  --delay: -21s;
+  --hue: 2744;
+  --rx: 117deg;
+  --ry: 141deg;
+  --rz: 64deg;
+}
+
+.ring i:nth-child(30) {
+  --delay: -21.75s;
+  --hue: 2842;
+  --rx: 243deg;
+  --ry: 261deg;
+  --rz: 210deg;
+}
+
+.ring i:nth-child(31) {
+  --delay: -22.5s;
+  --hue: 2940;
+  --rx: 323deg;
+  --ry: 138deg;
+  --rz: 173deg;
+}
+
+.ring i:nth-child(32) {
+  --delay: -23.25s;
+  --hue: 3038;
+  --rx: 299deg;
+  --ry: 173deg;
+  --rz: 349deg;
+}
+
+@-webkit-keyframes iMove {
+  0% {
+    -webkit-transform: rotateZ(var(--rz)) rotateY(var(--ry)) rotateX(var(--rx)) translateZ(50em);
+            transform: rotateZ(var(--rz)) rotateY(var(--ry)) rotateX(var(--rx)) translateZ(50em);
+  }
+  100% {
+    -webkit-transform: rotateZ(var(--rz)) rotateY(var(--ry)) rotateX(var(--rx)) translateZ(-50em);
+            transform: rotateZ(var(--rz)) rotateY(var(--ry)) rotateX(var(--rx)) translateZ(-50em);
+  }
+}
+
+@keyframes iMove {
+  0% {
+    -webkit-transform: rotateZ(var(--rz)) rotateY(var(--ry)) rotateX(var(--rx)) translateZ(50em);
+            transform: rotateZ(var(--rz)) rotateY(var(--ry)) rotateX(var(--rx)) translateZ(50em);
+  }
+  100% {
+    -webkit-transform: rotateZ(var(--rz)) rotateY(var(--ry)) rotateX(var(--rx)) translateZ(-50em);
+            transform: rotateZ(var(--rz)) rotateY(var(--ry)) rotateX(var(--rx)) translateZ(-50em);
+  }
+}
+
+@-webkit-keyframes iScale {
+  0%,
+  100% {
+    inset: -1em;
+    opacity: 0;
+  }
+  35%,
+  65% {
+    inset: -1em;
+    opacity: 1;
+  }
+  50% {
+    inset: -10em;
+    opacity: 1;
+  }
+}
+
+@keyframes iScale {
+  0%,
+  100% {
+    inset: -1em;
+    opacity: 0;
+  }
+  35%,
+  65% {
+    inset: -1em;
+    opacity: 1;
+  }
+  50% {
+    inset: -10em;
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=main.css.map */
